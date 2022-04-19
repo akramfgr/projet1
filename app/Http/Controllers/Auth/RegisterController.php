@@ -69,10 +69,6 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
-        Professeur::create([
-            'nom'=>request('name'),
-            'email'=>request('email')
-        ]);
         return User::create([
             'name'=>request('name'),
             'email'=>request('email'),
