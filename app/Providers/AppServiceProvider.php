@@ -24,9 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Charts $charts)
     {
-        if ($this->app->environment('production')) {
-            \URL::forceScheme('https');
-        }
         $charts->register([
             \App\Charts\Dossiers::class
         ]);
